@@ -6,13 +6,14 @@ import org.springframework.web.reactive.config.WebFluxConfigurer;
 import org.springframework.web.reactive.function.client.WebClient;
 
 /**
- * Clase de configuración para llamar a otros microservicios
+ * Clase de configuración para llamar a otros microservicios.
+ * @author achumpiy
  */
 @Configurable
 public class RestConfig implements WebFluxConfigurer {
 
     @Bean
-    public WebClient.Builder getWebClient(String url){
+    public WebClient.Builder getWebClient(String url) {
         return WebClient.builder().baseUrl(url);
 
     }
